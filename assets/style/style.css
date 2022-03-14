@@ -34,7 +34,7 @@ body {
    flex-direction: column;
    color: #884B15;
    padding: 20px;
-   animation: welcome 3s ease-in-out;
+   animation: welcome 2s ease-in-out;
    opacity: 0;
 }
 

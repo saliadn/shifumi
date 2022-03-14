@@ -2,7 +2,7 @@ const welcome_modal = document.querySelector('.welcome-modal');
 // delete welcome modal after 2s
 setTimeout(() => {
    welcome_modal.remove();
-}, 0);
+}, 2000);
 
 // selectionne les bouttons
 const choix = document.querySelector('.buttons').children;
