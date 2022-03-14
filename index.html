@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/style/style.css">
+   <link rel="shortcut icon" href="assets/img/feuille.png" type="image/x-icon">
+   <title>Shi-Fu-Mi</title>
+</head>
+<body>
+   <div class="welcome-modal">
+      <div class="welcome-modal-content">
+         <h1>Shi-Fu-Mi</h1>
+         <img src="assets/img/shifumi.png" alt="">
+      </div>
+   </div>
+   <div class="choix">
+      <h2>Shi-Fu-Mi</h2>
+      <div class="buttons">
+         <button><img src="assets/img/pierre.png" alt="Pierre" draggable="false"></button>
+         <button><img src="assets/img/feuille.png" alt="Feuille" draggable="false"></button>
+         <button><img src="assets/img/ciseaux.png" alt="Ciseaux" draggable="false"></button>
+      </div>
+   </div>
+
+   <div id="fight">
+      <h3>En attente du fight ...</h3>
+   </div>
+
+   <div class="scores">
+      <div class="board">
+         <h2>Vous</h2>
+         <hr>
+         <span id="player-score">0</span>
+      </div>
+      <div class="board">
+         <h2>Bot</h2>
+         <hr>
+         <span id="bot-score">0</span>
+      </div>
+   </div>
+   <script src="assets/js/script.js"></script>
+</body>
+</html>

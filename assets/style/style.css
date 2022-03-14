@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Quicksand';
+   /* background-color: #111; */
+   /* color: white; */
+}
+
+.welcome-modal {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: white;
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: welcome-full 3s ease-in-out;
+   opacity: 0;
+   z-index: 100;
+}
+
+.welcome-modal-content {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   color: #884B15;
+   padding: 20px;
+   animation: welcome 3s ease-in-out;
+   opacity: 0;
+}
+
+.welcome-modal-content img {
+   width: 50%;
+   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes welcome {
+   0% {
+      opacity: 0;
+      transform: translateY(30px);
+   }
+   25% {
+      opacity: 1;
+      transform: none;
+   }
+   75% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes welcome-full {
+   0% {opacity: 1;}
+   25% {opacity: 1;}
+   75% {opacity: 1;}
+   100% {opacity: 0;}
+}
+
+button {
+   font-family: 'Roboto Serif';
+   background: transparent;
+   border: none;
+   cursor: pointer;
+   /* background: #eee; */
+   border-radius: 5px;
+}
+button:hover {
+   background: #ffef00;
+}
+button:hover img {
+   transform: scale(105%);
+}
+button img {
+   transition: all 200ms ease-in-out;
+   width: 100px;
+}
+.choix {
+   display: flex;
+   gap: 1em;
+   width: max-content;
+   margin: auto;
+   flex-direction: column;
+   text-align: center;
+   margin-bottom: 10px;
+   margin-top: 30px;
+   border: 1px solid #eee;
+   background: #f7f7f7;
+   border-radius: 10px;
+   padding: 15px;
+}
+
+.scores {
+   width: 300px;
+   padding: 20px;
+   display: flex;
+   /* gap: .5em; */
+   margin: auto;
+}
+.board {
+   /* border: 1px solid blue; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: .5em;
+   width: 100%;
+   text-align: center;
+}
+.board h2 {
+   font-weight: normal;
+}
+#player-score {
+   color: #884B15;
+   background: #ffef00;
+   padding: 0 10px;
+   border-radius: 5px;
+   font-size: 15pt;
+   font-weight: 600;
+}
+#bot-score {
+   background: dodgerblue;
+   padding: 0 10px;
+   border-radius: 5px;
+   color: white;
+   font-size: 15pt;
+   font-weight: 600;
+}
+
+hr {
+   border: none;
+   height: 1px;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.1);
+}
+
+#fight {
+   display: flex;
+   text-align: center;
+   width: max-content;
+   margin: auto;
+   margin-top: 30px;
+   gap: 1em;
+   /* animation: welcome 2s ease-in-out; */
+}
+#fight-you {
+   /* border: 1px solid #222; */
+   background: #ffef00;
+   border-radius: 5px;
+   padding: 10px;
+   animation: toright 500ms cubic-bezier(0.54,-0.26, 0.13, 1.39);
+}
+#fight-bot {
+   color: white;
+   /* border: 1px solid #222; */
+   background: dodgerblue;
+   border-radius: 5px;
+   padding: 10px;
+   animation: toleft 500ms cubic-bezier(0.54,-0.26, 0.13, 1.39);
+}
+#fight-you h3 {
+   color: #884B15;
+}
+
+#fight img {
+   width: 100px;
+}
+
+@keyframes toright {
+   from {opacity: 0; transform: translateX(-20px);}
+   to  {opacity: 1; transform: none;}
+}
+
+@keyframes toleft {
+   from {opacity: 0; transform: translateX(20px);}
+   to  {opacity: 1; transform: none;}
+}
